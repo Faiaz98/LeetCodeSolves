@@ -3,7 +3,7 @@
  **This section will explain every question and solutions in details**
  The order of the solutions is maintained by following this doc: https://docs.google.com/spreadsheets/d/1ALWFKBXCXnUmORkkXgLVTj23veQVlgUS8x_o_JcO-go/edit?usp=sharing
 
-1. two Sum problem
+1. two Sum problem <br>
    problem statement: The task is to find two numbers in an array that add up to a given target.
    The goal is to return the indices of these two numbers.
 

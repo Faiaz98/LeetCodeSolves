@@ -46,11 +46,11 @@ Start Initialize an empty hash map (numIndex)
 │
 ┌──────────┘
 │
-│  Iterate through the array 'nums'
+│ Iterate through the array 'nums'
 │       │
 │       ▼
 │ ┌──────────────────────────┐
-│ │  For i = 0 to nums.size() │
+│ │ For i = 0 to nums.size() │
 │ └──────────────────────────┘
 │       │
 │       │

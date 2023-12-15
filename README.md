@@ -36,62 +36,26 @@
 
     Algorithm Steps:
 
-Start Initialize an empty hash map (numIndex)
+Start: Initialize an empty hash map (numIndex)
 │
+└─> numIndex {}
 │
-▼
-┌─────────────┐
-│ numIndex {} │
-└─────────────┘
-│
-┌──────────┘
-│
-│ Iterate through the array 'nums'
-│       │
-│       ▼
-│ ┌──────────────────────────┐
-│ │ For i = 0 to nums.size() │
-│ └──────────────────────────┘
-│       │
-│       │
-│       ▼
-│ ┌─────────────┐
-│ │ c = target -│
-│ │     nums[i] │
-│ └─────────────┘
-│       │
-│       ▼
-│ ┌─────────────┐
-│ │ If c exists │
-│ │ in numIndex │
-│ └─────────────┘
-│       │
-│       │
-│       ▼
-│ ┌────────────────────┘
-│ │ Return [numIndex[c], i]
-│ └────────────────────┐
-│       │
-│       │
-│       ▼
-│ ┌─────────────┐
-│ │ Store nums[i]│
-│ │   in numIndex│
-│ └─────────────┘
-│       │
-│       │
-│       ▼
-│ ┌───────────────────────────────┐
-│ │  numIndex[nums[i]] = i        │
-│ └───────────────────────────────┘
-│       │
-│       ▼
-│ ┌─────────────┐
-│ │ Continue loop│
-│ └─────────────┘
-│       │
-▼       ▼       ▼
-Return  ┌───────────────────────────────┐
-{}      │   Return an empty array {}     │
-        └───────────────────────────────┘
+└─> Iterate through the array 'nums'
+    │
+    └─> For i = 0 to nums.size()
+        │
+        └─> Calculate c = target - nums[i]
+            │
+            └─> If c exists in numIndex
+                │
+                └─> Return [numIndex[c], i]
+            │
+            └─> Store nums[i] in numIndex
+                │
+                └─> numIndex[nums[i]] = i
+            │
+            └─> Continue loop
+    │
+    └─> Return an empty array {}
+
 

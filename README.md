@@ -128,3 +128,27 @@ Here's a step-by-step explanation of the solution:
   - Update `temp` by dividing it by 10.
 4. Compare the reversed number `reversed` with the original number `x`.
 5. Return `true` if they are equal, indicating `x` is a palindrome. Otherwise, return `false`.
+
+#### Code Solution Explanation
+```
+Start: Check if x is negative
+│
+└─> If x < 0, Return false
+│
+└─> Initialize reversed = 0, temp = x
+│
+└─> Reverse the number 'temp' using a while loop
+    └─> While temp != 0
+        │
+        └─> Get the last digit of 'temp': digit = temp % 10
+        │
+        └─> Update 'reversed': reversed = reversed * 10 + digit
+        │
+        └─> Update 'temp': temp = temp / 10
+    │
+    └─> End of loop
+│
+└─> Compare reversed with original x
+    └─> If reversed equals x, Return true (x is a palindrome)
+    └─> Else, Return false (x is not a palindrome)
+```

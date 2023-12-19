@@ -95,3 +95,59 @@ Here's a step-by-step explanation of the solution:
   Return      ┌───────────────────────────────┐
     {}        │   Return an empty array {}    │
               └───────────────────────────────┘
+```
+## 2. Palindrome Number
+
+### Problem Statement: Given an integer `x`, return true if `x` is a palindrome, and false otherwise.
+
+#### Examples:
+- **Example 1:** Input: x = 121
+                 Output: true
+                 Explanation: 121 reads as 121 from left to right and from right to left.
+
+- **Example 2:** Input: x = -121
+                 Output: false
+                 Explanation: From left to right, it reads -121. From right to left, it becomes                    121-. Therefore it is not a palindrome.
+
+- **Example 3:** Input: x = 10
+                 Output: false
+                 Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
+
+### Solution
+- **[Code Solution](https://github.com/Faiaz98/LeetCodeSolves/blob/main/palindrome_number.cpp)**
+
+#### Solution Explanation
+The provided solution checks if the given integer is a palindrome by reversing the number and comparing it with the original number.
+Here's a step-by-step explanation of the solution:
+1. Check if `x` is negative. If so, return `false`.
+2. Initialize `reversed` and `temp` as long long integers with `reversed = 0` and `temp = x`.
+3. Use a `while` loop to reverse the number `temp`:
+  - Get the last digit of `temp` using modulo `% 10`.
+  - Multiply `reversed` by 10 and add the last digit.
+  - Update `temp` by dividing it by 10.
+4. Compare the reversed number `reversed` with the original number `x`.
+5. Return `true` if they are equal, indicating `x` is a palindrome. Otherwise, return `false`.
+
+#### Code Solution Explanation
+```
+Start: Check if x is negative
+│
+└─> If x < 0, Return false
+│
+└─> Initialize reversed = 0, temp = x
+│
+└─> Reverse the number 'temp' using a while loop
+    └─> While temp != 0
+        │
+        └─> Get the last digit of 'temp': digit = temp % 10
+        │
+        └─> Update 'reversed': reversed = reversed * 10 + digit
+        │
+        └─> Update 'temp': temp = temp / 10
+    │
+    └─> End of loop
+│
+└─> Compare reversed with original x
+    └─> If reversed equals x, Return true (x is a palindrome)
+    └─> Else, Return false (x is not a palindrome)
+```
